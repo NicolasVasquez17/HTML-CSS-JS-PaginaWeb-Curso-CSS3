@@ -25,7 +25,6 @@
 
         sliders[value-1].classList.add('testimony__body--show');
 
-
     }
-
+    
 })();
