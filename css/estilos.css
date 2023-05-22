@@ -41,17 +41,17 @@ body{
     z-index: -1;
 }
 
+/* Nav */
+
 nav{
     --padding-container:0;
     height: 100%;
     display: flex;
     align-items: center;
-
 }
 
 .nav__title{
     font-weight: 300;
-
 }
 
 .nav__link{
@@ -61,7 +61,6 @@ nav{
     grid-auto-flow: column;
     grid-auto-columns:max-content;
     gap: 2em;
-
 }
 
 .nav__items{
@@ -91,7 +90,6 @@ nav{
 /* HERO container*/
 
 .hero__container{
-
     max-width: 800px;
     display: grid;
     --padding-container:0;
@@ -146,6 +144,7 @@ nav{
     grid-template-columns: repeat(auto-fit, minmax(260px,auto));
 }
 
+
 .about__icons{
     display: grid;
     gap:1em;
@@ -163,7 +162,6 @@ nav{
 
 .knowledge{
     background-color: #e5e5f7;
-    opacity: 0.8;
     background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
     background-size: 20px 20px;
     background-position: 0 0,10px 10px;
@@ -349,6 +347,7 @@ nav{
 }
 
 .questions__title{
+    text-align: left;
     display:flex ;
     font-size: 20;
     padding: 30px 0 30px;
@@ -456,6 +455,7 @@ nav{
     font-size: 1rem;
     color: #fff;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .footer__copy{
@@ -479,7 +479,7 @@ nav{
 
 /*Media queries*/
 
-@media (max-width:800){
+@media (max-width:800px){
     .nav__menu{
         display: block;
     }
@@ -582,5 +582,97 @@ nav{
 
     .footer__input{
         flex: 1;
+        margin-bottom: 1rem;
+    }
+
+    .footer__submit{
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero__title{
+        font-size: 2rem;
+    }
+    .hero__paragraph{
+        font-size: 1rem;
+    }
+
+    .subtitle{
+        font-size: 1.8rem;
+    }
+    
+    .price__element{
+        width: 90%;
+    }
+
+    .price__element--best{
+        width: 90%;
+         /* padding: 40px; */
+    }
+
+    .price__price{
+        font-size: 2rem;
+    }
+
+    .testimony{
+        --padding-container:60px 0;
+    }
+
+    .testimony__container{
+        grid-template-columns: 28px 1fr 28px;
+        gap: .9em;
+    }
+
+    .testimony__arrow{
+        width: 100%;
+    }
+
+    .testimony__course{
+        margin-top: 15px;
+    }
+
+    .questions__title{
+        font-size: 1rem;
+    }
+    
+    .footer__title{
+        justify-self: start;
+        margin-bottom: 15px;
+    }
+
+    .nav--footer{
+        padding-bottom: 60px;
+    }
+
+    .nav__link--footer{
+        justify-content: space-between;
+    }
+
+    .footer__newsletter{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .footer__inputs{
+        flex-wrap: wrap;
+    }
+
+    .footer__input{
+        flex-basis: 100%;
+        margin: auto;
+        margin-bottom: 16px;
+        
+    }
+
+    .footer__submit{
+        margin: 0;
+        width: 100%;
+
+        /*
+        margin-right: auto;
+        margin-left: 0;
+        */
     }
 }
